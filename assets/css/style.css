@@ -1,0 +1,156 @@
+/*  
+--- google font ( Merriweather )
+*/
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::selection {
+  background: #000000;
+  color: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Merriweather", serif;
+  background: #ddd;
+  overflow: hidden;
+}
+
+/*-------------------------*\
+  #CONTAINER
+\*-------------------------*/
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container .main-content {
+  text-align: center;
+  line-height: 1.5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.content-top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0 auto;
+}
+
+.logo-img {
+  max-width: 200px;
+  width: 100%;
+}
+
+.logo-img img {
+  width: 100%;
+  height: auto;
+}
+
+.spin i {
+  font-size: 2.5rem;
+  color: #000000;
+  animation: spin 1s linear infinite;
+}
+
+/* spin animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.heading h1 {
+  margin: 0.5rem 0;
+  font-size: 2.5rem;
+}
+
+.heading p {
+  font-size: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: rgba(0, 0, 0, 0.9);
+  font-weight: 400;
+}
+
+.heading .release {
+  margin-top: 1rem;
+}
+
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+footer .copywrite {
+  text-align: center;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+
+/* mobile */
+@media (max-width: 600px) {
+    .heading h1 {
+        font-size: 2rem;
+    }
+
+    .heading p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 376px) {
+    .content-top {
+        gap: 0.5rem;
+    }
+
+    .logo-img {
+        max-width: 120px;
+    }
+
+    .spin i {
+        font-size: 1.5rem;
+    }
+
+    .heading h1 {
+        font-size: 1.5rem;
+    }
+
+    .heading p {
+        font-size: 0.6rem;
+    }
+
+    .heading .release {
+        font-size: 0.7rem;
+    }
+
+    footer .copywrite {
+        font-size: 0.7rem;
+    }
+}
